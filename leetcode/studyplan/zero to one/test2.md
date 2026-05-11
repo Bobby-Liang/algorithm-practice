@@ -5,13 +5,6 @@
 ### Python
 
 ```python
-if "c" in "abcdef":
-    print("ok")
-```
-
-### C++
-
-```cpp
 class Solution(object):
     def mergeAlternately(self, word1, word2):
         """
@@ -50,7 +43,15 @@ class Solution(object):
                 n+=1
         return(ans)
     
+```
 
+### C++
+
+```cpp
+string s = "abcdef";
+if (s.find('c') != string::npos) {
+    cout << "ok";
+}
 ```
 
 ## 删除字符
