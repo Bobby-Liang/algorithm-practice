@@ -48,10 +48,27 @@ class Solution(object):
 ### C++
 
 ```cpp
-string s = "abcdef";
-if (s.find('c') != string::npos) {
-    cout << "ok";
-}
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        string ans;
+        int n=0;
+        for(int i=0;i<word1.length()&&i<word2.length();i++){
+            ans+=word1[i];
+            ans+=word2[i];
+            n+=1;
+        }
+        while (n<word1.length()){
+            ans+=word1[n];
+            n+=1;
+        }
+        while (n<word2.length()){
+            ans+=word2[n];
+            n+=1;
+        }
+        return ans;
+    }
+};
 ```
 
 ## 删除字符
